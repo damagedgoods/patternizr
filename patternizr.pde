@@ -15,14 +15,16 @@ void setup() {
   background(255);  
 
   int numItems = 80;
-  int numShapes = 9;
+  float emptyPattern = 25;
+  color c1 = color(189,21,80,220);
+  color c2 = color(233,172,2,200);
+  color c3 = color(138,155,15,200);
   
-  float emptyPattern = 35;
   
   // Capa 1
   for (int i=0; i<numItems; i++) {
     int fila = i / 9;
-    int col = i % 9;    
+    int col = i % 9;
     int item_to_load = int(random(9));
     
     float empty = random(100);
@@ -30,18 +32,15 @@ void setup() {
     
     PShape it = item[item_to_load];
     it.disableStyle();    
-    fill(color(189,21,80,220));
+    fill(c1);
     noStroke();
-    shape(it,fila*100,col*100,100,100);
-    
+    shape(it,fila*100,col*100,100,100);    
   }
 
   // Capa 2
   int x_offset = -50;
   int y_offset = -50;
       
-  //translate(0,-width/2);
-  //rotate(PI/4);
   for (int i=0; i<numItems; i++) {
     int fila = i / 9;
     int col = i % 9;    
@@ -49,7 +48,7 @@ void setup() {
     PShape it = item[item_to_load];
     it.disableStyle();
     
-    fill(color(233,172,2,200));
+    fill(c2);
     noStroke();
    
     float empty = random(100);
@@ -58,9 +57,7 @@ void setup() {
     shape(it,fila*100+x_offset,col*100+y_offset,100,100);
   }
 
-  // Capa 3
-  
-      
+  // Capa 3        
   for (int i=0; i<numItems; i++) {
     
     float empty = random(100);
@@ -71,7 +68,7 @@ void setup() {
     int item_to_load = int(random(9));
     PShape it = item[item_to_load];
     it.disableStyle();
-    fill(color(138,155,15,200));
+    fill(c3);
     noStroke(); 
     shape(it,fila*100+x_offset,col*100+y_offset,100,100);
   }
@@ -79,8 +76,7 @@ void setup() {
 
 }
 
-void draw() {
-    
+void draw() {    
 }
 
 void mousePressed() {
