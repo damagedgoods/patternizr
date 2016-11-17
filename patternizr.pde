@@ -21,23 +21,18 @@ void setup() {
   
   // Settings
   int tileSize = 100;  
-  int numFilas = h / tileSize;
-  int numCols = w / tileSize;
-  int numShapes = 9;
-  
   float emptyPattern = 25;
-  color c1 = color(189,21,80,220);
-  color c2 = color(233,172,2,200);
-  color c3 = color(138,155,15,200);
   color[] capas = {color(189,21,80,220), color(233,172,2,200), color(138,155,15,200)};
-  
+
+    int numFilas = h / tileSize;
+  int numCols = w / tileSize;  
   int numItems = numFilas*numCols;
   
   for (int j= 0; j<capas.length; j++) {
     for (int i=0; i<numItems; i++) {
       int fila = i / numFilas;
       int col = i % numCols;
-      int item_to_load = int(random(numShapes));    
+      int item_to_load = int(random(item.length));    
       float empty = random(100);
       if (empty > emptyPattern) continue;    
       PShape it = item[item_to_load];
