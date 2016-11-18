@@ -4,15 +4,15 @@ void setup() {
   
   size(600,600);
   
-  item[0] = loadShape("item_ill-01.svg");
-  item[1] = loadShape("item_ill-02.svg");
-  item[2] = loadShape("item_ill-03.svg");
-  item[3] = loadShape("item_ill-04.svg");
-  item[4] = loadShape("item_ill-05.svg");
-  item[5] = loadShape("item_ill-06.svg");
-  item[6] = loadShape("item_ill-07.svg");
-  item[7] = loadShape("item_ill-08.svg");
-  item[8] = loadShape("item_ill-09.svg");
+  item[0] = loadShape("svg/item_ill-01.svg");
+  item[1] = loadShape("svg/item_ill-02.svg");
+  item[2] = loadShape("svg/item_ill-03.svg");
+  item[3] = loadShape("svg/item_ill-04.svg");
+  item[4] = loadShape("svg/item_ill-05.svg");
+  item[5] = loadShape("svg/item_ill-06.svg");
+  item[6] = loadShape("svg/item_ill-07.svg");
+  item[7] = loadShape("svg/item_ill-08.svg");
+  item[8] = loadShape("svg/item_ill-09.svg");
 
   background(255);  
 
@@ -20,7 +20,7 @@ void setup() {
   int h = 600;
   
   // Settings
-  int[] tileSize= {100,200,50};  
+  int[] tileSize= {150,100,100};  
   float emptyPattern = 25;
   color[] capas = {color(189,21,80,220), color(233,172,2,200), color(138,155,15,200)};
   
