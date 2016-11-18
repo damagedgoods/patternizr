@@ -20,15 +20,16 @@ void setup() {
   int h = 600;
   
   // Settings
-  int tileSize = 100;  
+  int[] tileSize= {100,200,50};  
   float emptyPattern = 25;
   color[] capas = {color(189,21,80,220), color(233,172,2,200), color(138,155,15,200)};
-
-    int numFilas = h / tileSize;
-  int numCols = w / tileSize;  
-  int numItems = numFilas*numCols;
   
   for (int j= 0; j<capas.length; j++) {
+    
+    int numFilas = h / tileSize[j];
+    int numCols = w / tileSize[j];  
+    int numItems = numFilas*numCols;
+    
     for (int i=0; i<numItems; i++) {
       int fila = i / numFilas;
       int col = i % numCols;
@@ -39,7 +40,7 @@ void setup() {
       it.disableStyle();    
       fill(capas[j]);
       noStroke();
-      shape(it,fila*tileSize,col*tileSize,tileSize,tileSize);    
+      shape(it,fila*tileSize[j],col*tileSize[j],tileSize[j],tileSize[j]);    
     }  
   }  
 }
