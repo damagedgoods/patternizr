@@ -21,7 +21,7 @@ void setup() {
   
   // Settings
   int[] tileSize= {150,100,100};  
-  float emptyPattern = 25;
+  float[] density = {25, 10,40};
   color[] capas = {color(189,21,80,220), color(233,172,2,200), color(138,155,15,200)};
   
   for (int j= 0; j<capas.length; j++) {
@@ -35,7 +35,7 @@ void setup() {
       int col = i % numCols;
       int item_to_load = int(random(item.length));    
       float empty = random(100);
-      if (empty > emptyPattern) continue;    
+      if (empty > density[j]) continue;    
       PShape it = item[item_to_load];
       it.disableStyle();    
       fill(capas[j]);
